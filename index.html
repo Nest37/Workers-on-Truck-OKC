@@ -1,97 +1,103 @@
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Workers on Truck Moving OkC</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script>
-        function cambiarIdioma(idioma) {
-            const textos = {
-                es: {
-                    titulo: "Workers on Truck Moving OkC",
-                    subtitulo: "Mudanzas confiables en Oklahoma City y alrededores",
-                    servicios: "Servicios",
-                    porque: "¿Por qué elegirnos?",
-                    precios: "Precios Aproximados",
-                    galeria: "Galería",
-                    contacto: "Contacto"
-                },
+        function changeLanguage(lang) {
+            const texts = {
                 en: {
-                    titulo: "Workers on Truck Moving OkC",
-                    subtitulo: "Reliable moving services in Oklahoma City",
-                    servicios: "Services",
-                    porque: "Why Choose Us?",
-                    precios: "Estimated Prices",
-                    galeria: "Gallery",
-                    contacto: "Contact"
+                    title: "Workers on Truck Moving OkC",
+                    subtitle: "Reliable moving services in Oklahoma City and surrounding areas",
+                    nav: ["Services", "Why Choose Us?", "Estimated Prices", "Gallery", "Contact"],
+                    services: "Residential and commercial moving",
+                    why: "Fast, safe, and affordable service",
+                    prices: "Starting at $100 for local moves",
+                    gallery: "Coming soon: work gallery",
+                    contact: "Contact Us"
+                },
+                es: {
+                    title: "Workers on Truck Moving OkC",
+                    subtitle: "Mudanzas confiables en Oklahoma City y alrededores",
+                    nav: ["Servicios", "¿Por qué elegirnos?", "Precios Aproximados", "Galería", "Contacto"],
+                    services: "Mudanzas residenciales y comerciales",
+                    why: "Servicio rápido, seguro y accesible",
+                    prices: "Desde $100 por mudanza local",
+                    gallery: "Próximamente: galería de trabajos",
+                    contact: "Contáctanos"
                 },
                 fr: {
-                    titulo: "Workers on Truck Moving OkC",
-                    subtitulo: "Services de déménagement fiables à Oklahoma City",
-                    servicios: "Services",
-                    porque: "Pourquoi nous choisir?",
-                    precios: "Tarifs estimés",
-                    galeria: "Galerie",
-                    contacto: "Contact"
+                    title: "Workers on Truck Moving OkC",
+                    subtitle: "Services de déménagement fiables à Oklahoma City",
+                    nav: ["Services", "Pourquoi nous choisir?", "Tarifs estimés", "Galerie", "Contact"],
+                    services: "Déménagement résidentiel et commercial",
+                    why: "Rapide, sûr et abordable",
+                    prices: "À partir de 100 $ pour les déménagements locaux",
+                    gallery: "Bientôt disponible : galerie de travaux",
+                    contact: "Contactez-nous"
                 },
                 zh: {
-                    titulo: "Workers on Truck Moving OkC",
-                    subtitulo: "俄克拉荷马市可靠的搬家服务",
-                    servicios: "服务",
-                    porque: "为什么选择我们？",
-                    precios: "预估价格",
-                    galeria: "画廊",
-                    contacto: "联系"
+                    title: "俄克拉荷马卡车搬家公司",
+                    subtitle: "可靠的搬家服务，覆盖俄克拉荷马市及周边地区",
+                    nav: ["服务", "为什么选择我们", "估算价格", "画廊", "联系"],
+                    services: "住宅和商业搬迁",
+                    why: "快速、安全、价格合理",
+                    prices: "本地搬家起价 100 美元",
+                    gallery: "即将上线：作品展示",
+                    contact: "联系我们"
                 }
             };
-            const t = textos[idioma];
-            document.getElementById("titulo").innerText = t.titulo;
-            document.getElementById("subtitulo").innerText = t.subtitulo;
-            document.getElementById("link-servicios").innerText = t.servicios;
-            document.getElementById("link-porque").innerText = t.porque;
-            document.getElementById("link-precios").innerText = t.precios;
-            document.getElementById("link-galeria").innerText = t.galeria;
-            document.getElementById("link-contacto").innerText = t.contacto;
+            const t = texts[lang];
+            document.getElementById("title").innerText = t.title;
+            document.getElementById("subtitle").innerText = t.subtitle;
+            const navLinks = document.querySelectorAll("nav a");
+            navLinks.forEach((a, i) => a.innerText = t.nav[i]);
+            document.getElementById("section-services").innerText = t.services;
+            document.getElementById("section-why").innerText = t.why;
+            document.getElementById("section-prices").innerText = t.prices;
+            document.getElementById("section-gallery").innerText = t.gallery;
+            document.getElementById("section-contact").innerText = t.contact;
         }
     </script>
 </head>
-<body>
+<body onload="changeLanguage('en')">
     <header>
-        <h1 id="titulo">Workers on Truck Moving OkC</h1>
-        <p id="subtitulo">Mudanzas confiables en Oklahoma City y alrededores</p>
-        <div>
-            <button onclick="cambiarIdioma('es')">🇪🇸 Español</button>
-            <button onclick="cambiarIdioma('en')">🇺🇸 English</button>
-            <button onclick="cambiarIdioma('fr')">🇫🇷 Français</button>
-            <button onclick="cambiarIdioma('zh')">🇨🇳 中文</button>
-        </div>
+        <h1 id="title">Workers on Truck Moving OkC</h1>
+        <p id="subtitle">Reliable moving services in Oklahoma City and surrounding areas</p>
+        <select onchange="changeLanguage(this.value)">
+            <option value="en">🇺🇸 English</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="zh">🇨🇳 中文</option>
+        </select>
     </header>
     <nav>
         <ul>
-            <li><a id="link-servicios" href="#servicios">Servicios</a></li>
-            <li><a id="link-porque" href="#porqueelegirnos">¿Por qué elegirnos?</a></li>
-            <li><a id="link-precios" href="#precios">Precios</a></li>
-            <li><a id="link-galeria" href="#galeria">Galería</a></li>
-            <li><a id="link-contacto" href="#contacto">Contacto</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why">Why Choose Us?</a></li>
+            <li><a href="#prices">Estimated Prices</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <main>
-        <section id="servicios"><h2>🚚 Mudanzas residenciales y comerciales</h2></section>
-        <section id="porqueelegirnos"><h2>✅ Rápido, seguro y confiable</h2></section>
-        <section id="precios">
-            <h2>💵 Desde $100 por mudanza local</h2>
+        <section id="services"><h2 id="section-services">Residential and commercial moving</h2></section>
+        <section id="why"><h2 id="section-why">Fast, safe, and affordable service</h2></section>
+        <section id="prices">
+            <h2 id="section-prices">Starting at $100 for local moves</h2>
             <form action="https://www.paypal.com/donate" method="post" target="_blank">
                 <input type="hidden" name="business" value="your-paypal-email@example.com" />
                 <input type="hidden" name="currency_code" value="USD" />
-                <button type="submit">💳 Pagar con PayPal o tarjeta</button>
+                <button type="submit">💳 Pay with PayPal or Card</button>
             </form>
         </section>
-        <section id="galeria"><h2>📸 Próximamente fotos de trabajos</h2></section>
-        <section id="contacto">
-            <h2>📞 Contáctanos</h2>
-            <p><a href="https://wa.me/12143037280" target="_blank">Enviar WhatsApp</a></p>
+        <section id="gallery"><h2 id="section-gallery">Coming soon: work gallery</h2></section>
+        <section id="contact">
+            <h2 id="section-contact">Contact Us</h2>
+            <p><a href="https://wa.me/12143037280" target="_blank">Send WhatsApp</a></p>
         </section>
     </main>
     <footer>
