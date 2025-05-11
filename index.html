@@ -1,78 +1,57 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workers on Truck Moving OkC</title>
-    <link rel="stylesheet" href="style.css" />
-    <script>
-    function switchLang(lang) {
-        const elements = document.querySelectorAll("[data-lang]");
-        elements.forEach(el => {
-            el.style.display = el.dataset.lang === lang ? "block" : "none";
-        });
-    }
-    window.onload = () => switchLang('en');
-    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Workers on Truck Moving OkC</h1>
-        <p data-lang="en">Reliable moving services in Oklahoma City and nearby areas</p>
-        <p data-lang="es">Mudanzas confiables en Oklahoma City y alrededores</p>
-        <div class="lang-switch">
-            <button onclick="switchLang('en')">English</button>
-            <button onclick="switchLang('es')">Español</button>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#why">Why us</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <p>Mudanzas confiables en Oklahoma City y alrededores</p>
+        <img src="https://i.imgur.com/Cq0WQ0n.png" alt="Camión de mudanza" style="width: 300px; margin-top: 20px;">
     </header>
+    <nav>
+        <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#porqueelegirnos">¿Por qué elegirnos?</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
     <main>
-        <section id="services">
-            <h2 data-lang="en">Services</h2>
-            <h2 data-lang="es">Servicios</h2>
+        <section id="servicios">
+            <h2>Servicios</h2>
             <ul>
-                <li data-lang="en">Home moving</li>
-                <li data-lang="es">Mudanzas residenciales</li>
-                <li data-lang="en">Furniture and appliance transport</li>
-                <li data-lang="es">Traslado de muebles y electrodomésticos</li>
-                <li data-lang="en">Truck loading and unloading</li>
-                <li data-lang="es">Carga y descarga de camiones</li>
+                <li>Mudanzas residenciales</li>
+                <li>Traslado de muebles y electrodomésticos</li>
+                <li>Carga y descarga de camiones</li>
             </ul>
         </section>
-        <section id="why">
-            <h2 data-lang="en">Why choose us?</h2>
-            <h2 data-lang="es">¿Por qué elegirnos?</h2>
-            <p data-lang="en">We offer fast, secure, and affordable moving with trained staff and personalized service.</p>
-            <p data-lang="es">Ofrecemos rapidez, seguridad y precios accesibles. Contamos con personal capacitado y atención personalizada.</p>
+        <section id="porqueelegirnos">
+            <h2>¿Por qué elegirnos?</h2>
+            <p>Ofrecemos rapidez, seguridad y precios accesibles. Contamos con personal capacitado y atención personalizada.</p>
         </section>
-        <section id="pricing">
-            <h2 data-lang="en">Estimated Prices</h2>
-            <h2 data-lang="es">Precios Aproximados</h2>
-            <p data-lang="en">Starting from $100 for local moves. Request your quote today!</p>
-            <p data-lang="es">Desde $100 por mudanza local. ¡Solicita tu presupuesto hoy!</p>
-            <a href="https://www.paypal.com/paypalme/yourpaypaluser" class="btn" data-lang="en">Pay with PayPal</a>
-            <a href="https://www.paypal.com/paypalme/yourpaypaluser" class="btn" data-lang="es">Pagar con PayPal</a>
+        <section id="precios">
+            <h2>Precios Aproximados</h2>
+            <p>Desde $100 por mudanza local. ¡Solicita tu presupuesto sin compromiso!</p>
         </section>
-        <section id="gallery">
-            <h2 data-lang="en">Gallery</h2>
-            <h2 data-lang="es">Galería</h2>
-            <p data-lang="en">Add photos of your previous jobs here.</p>
-            <p data-lang="es">Aquí puedes agregar fotos de tus trabajos realizados.</p>
+        <section id="galeria">
+            <h2>Galería</h2>
+            <p>Aquí puedes agregar fotos de tus trabajos realizados.</p>
         </section>
-        <section id="contact">
-            <h2 data-lang="en">Contact</h2>
-            <h2 data-lang="es">Contacto</h2>
-            <p><a href="https://wa.me/14051234567" class="btn" data-lang="en">Message us on WhatsApp</a></p>
-            <p><a href="https://wa.me/14051234567" class="btn" data-lang="es">Escríbenos por WhatsApp</a></p>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Tel: (405) 123-4567</p>
+            <p>Email: contacto@workersontruckokc.com</p>
+            <p>
+                <a href="https://wa.me/12143037280" target="_blank" style="font-size: 18px; color: green;">
+                    Enviar mensaje por WhatsApp
+                </a>
+            </p>
         </section>
     </main>
     <footer>
