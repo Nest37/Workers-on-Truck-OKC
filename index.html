@@ -6,48 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workers on Truck Moving OkC</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function cambiarIdioma(idioma) {
+            const textos = {
+                es: {
+                    titulo: "Workers on Truck Moving OkC",
+                    subtitulo: "Mudanzas confiables en Oklahoma City y alrededores",
+                    servicios: "Servicios",
+                    porque: "¿Por qué elegirnos?",
+                    precios: "Precios Aproximados",
+                    galeria: "Galería",
+                    contacto: "Contacto"
+                },
+                en: {
+                    titulo: "Workers on Truck Moving OkC",
+                    subtitulo: "Reliable moving services in Oklahoma City",
+                    servicios: "Services",
+                    porque: "Why Choose Us?",
+                    precios: "Estimated Prices",
+                    galeria: "Gallery",
+                    contacto: "Contact"
+                },
+                fr: {
+                    titulo: "Workers on Truck Moving OkC",
+                    subtitulo: "Services de déménagement fiables à Oklahoma City",
+                    servicios: "Services",
+                    porque: "Pourquoi nous choisir?",
+                    precios: "Tarifs estimés",
+                    galeria: "Galerie",
+                    contacto: "Contact"
+                },
+                zh: {
+                    titulo: "Workers on Truck Moving OkC",
+                    subtitulo: "俄克拉荷马市可靠的搬家服务",
+                    servicios: "服务",
+                    porque: "为什么选择我们？",
+                    precios: "预估价格",
+                    galeria: "画廊",
+                    contacto: "联系"
+                }
+            };
+            const t = textos[idioma];
+            document.getElementById("titulo").innerText = t.titulo;
+            document.getElementById("subtitulo").innerText = t.subtitulo;
+            document.getElementById("link-servicios").innerText = t.servicios;
+            document.getElementById("link-porque").innerText = t.porque;
+            document.getElementById("link-precios").innerText = t.precios;
+            document.getElementById("link-galeria").innerText = t.galeria;
+            document.getElementById("link-contacto").innerText = t.contacto;
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Workers on Truck Moving OkC</h1>
-        <p>Mudanzas confiables en Oklahoma City y alrededores</p>
-        <p>Reliable moving services in Oklahoma City and surrounding areas</p>
+        <h1 id="titulo">Workers on Truck Moving OkC</h1>
+        <p id="subtitulo">Mudanzas confiables en Oklahoma City y alrededores</p>
+        <div>
+            <button onclick="cambiarIdioma('es')">🇪🇸 Español</button>
+            <button onclick="cambiarIdioma('en')">🇺🇸 English</button>
+            <button onclick="cambiarIdioma('fr')">🇫🇷 Français</button>
+            <button onclick="cambiarIdioma('zh')">🇨🇳 中文</button>
+        </div>
     </header>
     <nav>
         <ul>
-            <li><a href="#servicios">Servicios / Services</a></li>
-            <li><a href="#porqueelegirnos">¿Por qué elegirnos? / Why Us?</a></li>
-            <li><a href="#precios">Precios / Prices</a></li>
-            <li><a href="#galeria">Galería / Gallery</a></li>
-            <li><a href="#contacto">Contacto / Contact</a></li>
+            <li><a id="link-servicios" href="#servicios">Servicios</a></li>
+            <li><a id="link-porque" href="#porqueelegirnos">¿Por qué elegirnos?</a></li>
+            <li><a id="link-precios" href="#precios">Precios</a></li>
+            <li><a id="link-galeria" href="#galeria">Galería</a></li>
+            <li><a id="link-contacto" href="#contacto">Contacto</a></li>
         </ul>
     </nav>
     <main>
-        <section id="servicios">
-            <h2>Servicios / Services</h2>
-            <ul>
-                <li>Mudanzas residenciales / Residential moving</li>
-                <li>Traslado de muebles y electrodomésticos / Furniture and appliance transport</li>
-                <li>Carga y descarga de camiones / Truck loading and unloading</li>
-            </ul>
-        </section>
-        <section id="porqueelegirnos">
-            <h2>¿Por qué elegirnos? / Why Choose Us?</h2>
-            <p>Rapidez, seguridad y precios accesibles. / Fast, safe, and affordable.</p>
-            <p>Atención personalizada y personal capacitado. / Personalized attention and trained staff.</p>
-        </section>
+        <section id="servicios"><h2>🚚 Mudanzas residenciales y comerciales</h2></section>
+        <section id="porqueelegirnos"><h2>✅ Rápido, seguro y confiable</h2></section>
         <section id="precios">
-            <h2>Precios Aproximados / Estimated Prices</h2>
-            <p>Desde $100 por mudanza local. / Starting at $100 for local moves.</p>
+            <h2>💵 Desde $100 por mudanza local</h2>
+            <form action="https://www.paypal.com/donate" method="post" target="_blank">
+                <input type="hidden" name="business" value="your-paypal-email@example.com" />
+                <input type="hidden" name="currency_code" value="USD" />
+                <button type="submit">💳 Pagar con PayPal o tarjeta</button>
+            </form>
         </section>
-        <section id="galeria">
-            <h2>Galería / Gallery</h2>
-            <p>Aquí puedes agregar fotos de tus trabajos realizados. / Add photos of your work here.</p>
-        </section>
+        <section id="galeria"><h2>📸 Próximamente fotos de trabajos</h2></section>
         <section id="contacto">
-            <h2>Contacto / Contact</h2>
-            <p>Tel: (405) 123-4567</p>
-            <p>Email: contacto@workersontruckokc.com</p>
+            <h2>📞 Contáctanos</h2>
+            <p><a href="https://wa.me/12143037280" target="_blank">Enviar WhatsApp</a></p>
         </section>
     </main>
     <footer>
