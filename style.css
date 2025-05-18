@@ -44,11 +44,9 @@ footer {
     text-align: center;
     padding: 10px;
 }
-button[type="submit"] {
-    background-color: #0070ba;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    margin-top: 10px;
-    cursor: pointer;
+
+#paypal-container-LBADLS32Q9VYW {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
 }
