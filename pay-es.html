@@ -1,6 +1,14 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Pagar tu Servicio</title></head>
-<body><h1>Pagar tu Servicio</h1><p>Ingresa el monto a pagar y completa tu pago a continuación:</p>
-<div id="paypal-container-LBADLS32Q9VYW"></div>
+<!DOCTYPE html><html lang="es">
+<head><meta charset="UTF-8"><title>Ir a la página de pago</title>
 <script src="https://www.paypal.com/sdk/js?client-id=BAAVLG7CwyUy0E3tyuZA4gaNABwEO6azmIw3_0NtiaDL2Na5FFw1ljZ2qy1gMGrdEuLNE3bxmlEuT0Dj44&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
-<script>paypal.HostedButtons({hostedButtonId: "LBADLS32Q9VYW"}).render("#paypal-container-LBADLS32Q9VYW");</script>
-<p><a href="index-es.html">← Volver al inicio</a></p></body></html>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body><main>
+  <h1>Ir a la página de pago</h1>
+  <p>Desde $100 por mudanza local</p>
+  <div id="paypal-container-LBADLS32Q9VYW"></div>
+  <script>
+    paypal.HostedButtons({ hostedButtonId: "LBADLS32Q9VYW" }).render("#paypal-container-LBADLS32Q9VYW");
+  </script>
+  <p><a href="index-es.html">← Volver al inicio</a></p>
+</main></body></html>

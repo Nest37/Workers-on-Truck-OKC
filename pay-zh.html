@@ -1,6 +1,14 @@
-<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><title>支付服务费用</title></head>
-<body><h1>支付服务费用</h1><p>请输入金额并完成支付：</p>
-<div id="paypal-container-LBADLS32Q9VYW"></div>
+<!DOCTYPE html><html lang="zh">
+<head><meta charset="UTF-8"><title>前往付款</title>
 <script src="https://www.paypal.com/sdk/js?client-id=BAAVLG7CwyUy0E3tyuZA4gaNABwEO6azmIw3_0NtiaDL2Na5FFw1ljZ2qy1gMGrdEuLNE3bxmlEuT0Dj44&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
-<script>paypal.HostedButtons({hostedButtonId: "LBADLS32Q9VYW"}).render("#paypal-container-LBADLS32Q9VYW");</script>
-<p><a href="index-zh.html">← 返回主页</a></p></body></html>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body><main>
+  <h1>前往付款</h1>
+  <p>本地搬家起价 $100</p>
+  <div id="paypal-container-LBADLS32Q9VYW"></div>
+  <script>
+    paypal.HostedButtons({ hostedButtonId: "LBADLS32Q9VYW" }).render("#paypal-container-LBADLS32Q9VYW");
+  </script>
+  <p><a href="index-zh.html">← 返回主页</a></p>
+</main></body></html>
