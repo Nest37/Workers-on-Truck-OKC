@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pagar tu Servicio</title>
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAVLG7CwyUy0E3tyuZA4gaNABwEO6azmIw3_0NtiaDL2Na5FFw1ljZ2qy1gMGrdEuLNE3bxmlEuT0Dj44&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #e0f0ff;
+      color: #003366;
+    }
+    h1 {
+      color: #003366;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pagar tu Servicio</h1>
+  <p>Ingresa el monto a pagar y completa tu pago a continuación:</p>
+  <div id="paypal-container-LBADLS32Q9VYW"></div>
+  <script>
+    paypal.HostedButtons({
+      hostedButtonId: "LBADLS32Q9VYW",
+    }).render("#paypal-container-LBADLS32Q9VYW");
+  </script>
+  <p><a href="index-es.html">← Volver al inicio</a></p>
+</body>
+</html>
